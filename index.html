@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP, even,password</title>
+</head>
+<body>
+    <h4>1) Otp generator</h4>
+    <h1></h1>
+    <button id="otp" onclick="Click()">Generate  OTP</button> <br><br>
+   <h4>2) Check even or odd </h4>
+    <input type="number" id="num">
+   <input type="submit" onclick="number()"> <br>
+   <p id="para"></p>
+<h4>3) Password visible and hide </h4>
+
+   <input type="password" id="passWord" placeholder="enter password">
+   <button onclick="password()">Click to view</button>
+   
+   
+  
+   <script>
+   function Click(){
+   
+    const para1=document.getElementsByTagName("h1") 
+    p1 = Math.floor(Math.random() * (10000-1000)+1000);
+    para1[0].innerHTML=p1;
+   }
+
+
+   function number(){
+    let num1=document.getElementById("num").value;
+    let par=document.getElementById("para")
+    if(num1%2==0){
+        par.innerHTML=`${num1} is Even Number`
+    }
+    else{
+        par.innerHTML=`${num1} is Odd Number` 
+    }
+   }
+   
+
+   function password(){
+    let pass=document.getElementById("passWord")
+        if(pass.type === "password"){
+            pass.type = "text";
+
+        }else{
+            pass.type = "password";
+        }
+   }
+   </script> 
+</body>
+</html>
